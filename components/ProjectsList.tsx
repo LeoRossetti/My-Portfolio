@@ -4,7 +4,19 @@ import ProjectCard from './ProjectCard';
 const ProjectsList: React.FC = () => {
     const projects = [
         {
-            title: 'Personal Portfolio',
+            title: 'Youtube Watch-List',
+            description: 'This is a Brave/Chrome extension that saves videos with their timestamps',
+            link: 'https://github.com/LeoRossetti/Youtube-Watch-List.git',
+            image: '/images/project1-preview.jpg'
+        },
+        {
+            title: 'Youtube Watch-List',
+            description: 'This is a Brave/Chrome extension that saves videos with their timestamps',
+            link: 'https://github.com/LeoRossetti/Youtube-Watch-List.git',
+            image: '/images/project1-preview.jpg'
+        },
+        {
+            title: 'Youtube Watch-List',
             description: 'This is a Brave/Chrome extension that saves videos with their timestamps',
             link: 'https://github.com/LeoRossetti/Youtube-Watch-List.git',
             image: '/images/project1-preview.jpg'

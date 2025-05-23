@@ -1,5 +1,5 @@
 import React from 'react';
-// import './AboutMe.css'; // You may move AboutMe styles to globals.css or create AboutMe.module.css
+// Styles for AboutMe are now in styles/globals.css
 
 const AboutMe: React.FC = () => {
     return (

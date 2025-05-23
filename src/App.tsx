@@ -1,6 +1,6 @@
 import React from 'react';
-import AboutMe from './components/AboutMe';
-import ProjectsList from './components/ProjectsList';
+import AboutMe from '../components/AboutMe';
+import ProjectsList from '../components/ProjectsList';
 import './styles/main.css';
 
 const App: React.FC = () => {
