@@ -1,216 +1,324 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Fira+Mono:wght@400;700&display=swap');
+/*
+  Improved global styles for a modern, tech-inspired portfolio without Tailwind CSS.
+  Uses Montserrat and Fira Mono for a clean, readable look.
+*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Fira+Mono:wght@400;700&family=Inter:wght@400;700;900&display=swap');
 
+/* --- Modern Tech-Inspired Tweaks --- */
+
+/* Smoother background gradient */
 body {
-    font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(120deg, #181f2a 0%, #232b3a 60%, #1a2636 100%);
+    color: #e3e9f7;
+    font-family: 'Inter', 'Montserrat', 'Segoe UI', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(135deg, #0f2027 0%, #2c5364 100%);
     min-height: 100vh;
-    color: #e3e9f7;
 }
 
+/* Sleek header */
 header {
-    background: #1a2636;
-    color: #61dafb;
-    padding: 32px 0 16px 0;
+    background: rgba(24, 31, 42, 0.97);
+    color: #b3cfff;
+    padding: 20px 0 10px 0;
     text-align: center;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    box-shadow: 0 2px 16px rgba(0,0,0,0.18);
+    border-bottom: 1px solid #232b3a;
     letter-spacing: 2px;
-}
-
-header h1 {
-    font-family: 'Fira Mono', monospace;
-    font-size: 2.5rem;
-    margin: 0;
     font-weight: 700;
-    letter-spacing: 2px;
+    font-size: 1.5rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(6px);
+}
+header h1 {
+    font-family: 'Inter', 'Montserrat', 'Fira Mono', monospace;
+    font-size: 3.2rem;
+    font-weight: 900;
+    letter-spacing: 2.5px;
+    margin: 0;
+    background: linear-gradient(90deg, #e6f7ff 0%, #b3e0ff 60%, #7ecfff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    /* text-fill-color intentionally omitted for compatibility */
+    text-shadow: 0 4px 24px #b3e0ff66, 0 1px 0 #fff4;
+    line-height: 1.1;
 }
 
+/* Navigation links */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    background: transparent;
+    margin-bottom: 24px;
+    position: sticky;
+    top: 60px;
+    z-index: 99;
+}
+nav a {
+    color: #7ecfff;
+    margin: 0 18px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s, border-bottom 0.2s;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 2px;
+}
+nav a:hover {
+    color: #b3cfff;
+    border-bottom: 2px solid #b3cfff;
+}
+
+/* Container for content */
 .container {
-    width: 90%;
-    max-width: 1200px;
+    width: 92%;
+    max-width: 1100px;
     margin: 32px auto 0 auto;
-    padding: 0 16px;
+    padding: 0 12px;
 }
 
+/* About Me section */
 .about-me {
-    background: rgba(30, 41, 59, 0.95);
-    border-radius: 16px;
-    box-shadow: 0 4px 24px 0 rgba(0,0,0,0.12);
+    background: rgba(30, 41, 59, 0.97);
+    border-radius: 18px;
+    box-shadow: 0 4px 24px 0 rgba(0,0,0,0.14);
     display: flex;
     align-items: center;
-    gap: 32px;
-    padding: 32px;
+    gap: 48px;
+    padding: 48px 36px;
     margin-bottom: 48px;
     flex-wrap: wrap;
     justify-content: center;
     text-align: center;
+    border: 1.5px solid #61dafb33;
+    animation: card-fade-in 0.8s cubic-bezier(0.22,1,0.36,1);
+    min-height: 260px;
+    position: relative;
 }
-
 .about-me__photo {
     border-radius: 50%;
-    width: 160px;
-    height: 160px;
-    border: 4px solid #61dafb;
+    width: 208px; /* 130px * 1.6 ≈ 208px */
+    height: 208px;
+    border: 3px solid #00ffe7;
     box-shadow: 0 2px 16px 0 #0e1a2b;
     object-fit: cover;
+    transition: box-shadow 0.3s, border 0.3s;
 }
-
+.about-me__photo:hover {
+    box-shadow: 0 0 32px #00ffe7cc;
+    border: 3px solid #7f5fff;
+}
 .about-me__title {
-    color: #61dafb;
-    font-family: 'Fira Mono', monospace;
-    font-size: 2rem;
-    margin-bottom: 8px;
-    font-weight: 700;
+    color: #fff;
+    font-family: 'Inter', 'Montserrat', 'Fira Mono', monospace;
+    font-size: 2.1rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    margin-bottom: 18px;
     width: 100%;
     text-align: center;
+    background: none;
+    background-clip: unset;
+    -webkit-background-clip: unset;
+    -webkit-text-fill-color: unset;
+    text-shadow: 0 2px 12px #232b3a55, 0 1px 0 #fff1;
+    line-height: 1.1;
+    position: relative;
+    z-index: 1;
 }
-
+.about-me__title::before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 120%;
+    height: 120%;
+    background: radial-gradient(circle, #b3e0ff33 0%, #232b3a00 80%);
+    border-radius: 18px;
+    z-index: -1;
+    filter: blur(2px);
+    opacity: 0.7;
+}
 .about-me__description {
     font-family: 'Montserrat', Arial, sans-serif;
-    font-size: 1.15rem;
+    font-size: 1.18rem;
     margin-bottom: 16px;
     color: #e3e9f7;
-    max-width: 500px;
+    max-width: 600px;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
 }
-
 .about-me__links {
     display: flex;
-    gap: 16px;
+    gap: 24px;
     justify-content: center;
     width: 100%;
+    margin-top: 18px;
 }
-
 .about-me__link {
-    background: #232b3a;
-    color: #61dafb;
-    border: 2px solid #61dafb;
-    border-radius: 8px;
-    padding: 8px 20px;
-    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: linear-gradient(90deg, #232b3a 0%, #3a4a5a 100%);
+    color: #fff;
+    border: 2px solid #b3e0ff;
+    border-radius: 12px;
+    padding: 14px 32px;
+    font-weight: 700;
+    font-size: 1.15rem;
     text-decoration: none;
-    transition: background 0.2s, color 0.2s;
-    box-shadow: 0 2px 8px 0 #0e1a2b;
-    font-family: 'Fira Mono', monospace;
+    transition: background 0.2s, color 0.2s, border 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 12px 0 #0e1a2b33;
+    font-family: 'Inter', 'Fira Mono', monospace;
+    letter-spacing: 1px;
+    position: relative;
 }
-
 .about-me__link:hover {
-    background: #61dafb;
-    color: #232b3a;
+    background: linear-gradient(90deg, #3a4a5a 0%, #232b3a 100%);
+    color: #b3e0ff;
+    border: 2px solid #7ecfff;
+    box-shadow: 0 0 16px #b3e0ff88;
+}
+.about-me__icon {
+    width: 1.6em;
+    height: 1.6em;
+    display: inline-block;
+    vertical-align: middle;
+    fill: currentColor;
 }
 
+/* Projects section */
 .projects-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 32px;
-    justify-items: center;
-    align-items: stretch;
-    margin-bottom: 48px;
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
 }
-
 .project-card {
-    background: rgba(23, 32, 42, 0.98);
-    border: 2px solid #1a2636;
-    border-radius: 16px;
-    box-shadow: 0 4px 24px 0 rgba(0,0,0,0.18);
-    padding: 24px 20px 20px 20px;
+    background: rgba(30, 38, 54, 0.92);
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(0,255,231,0.05);
+    padding: 28px 22px;
+    margin: 24px 0;
+    transition: transform 0.2s, box-shadow 0.2s, border 0.2s;
+    border: 1px solid #232b3a;
+    animation: card-fade-in 0.7s cubic-bezier(0.22,1,0.36,1);
     display: flex;
     flex-direction: column;
     align-items: center;
-    transition: transform 0.2s, border 0.2s;
-    min-width: 280px;
-    max-width: 350px;
-    position: relative;
-    overflow: hidden;
+    height: 100%;
 }
-
 .project-card:hover {
-    transform: translateY(-8px) scale(1.03);
-    border: 2px solid #61dafb;
-    box-shadow: 0 8px 32px 0 #0e1a2b;
+    transform: translateY(-6px) scale(1.04);
+    box-shadow: 0 8px 32px #00ffe733, 0 0 16px #7f5fff44;
+    border-color: #00ffe7;
 }
-
 .project-preview {
     width: 100%;
-    height: 180px;
+    height: 160px;
     object-fit: cover;
     border-radius: 10px;
-    margin-bottom: 18px;
+    margin-bottom: 14px;
     border: 2px solid #232b3a;
     background: #232b3a;
 }
-
 .project-card h3 {
-    color: #61dafb;
+    color: #b3cfff;
     font-family: 'Fira Mono', monospace;
-    font-size: 1.3rem;
+    font-size: 1.18rem;
     margin: 0 0 8px 0;
     font-weight: 600;
+    letter-spacing: 1px;
 }
-
 .project-card p {
     color: #e3e9f7;
     font-family: 'Montserrat', Arial, sans-serif;
-    font-size: 1rem;
-    margin-bottom: 16px;
+    font-size: 1.01rem;
+    margin-bottom: 14px;
     text-align: center;
+    opacity: 0.92;
 }
-
 .project-button {
     text-decoration: none;
-    color: #232b3a;
-    background: linear-gradient(90deg, #61dafb 0%, #007bff 100%);
+    color: #e3e9f7;
+    background: linear-gradient(90deg, #3a4a5a 0%, #2c5364 100%);
     padding: 10px 28px;
     border-radius: 8px;
     font-weight: 600;
     font-size: 1rem;
     border: none;
-    box-shadow: 0 2px 8px 0 #0e1a2b;
-    transition: background 0.2s, color 0.2s;
+    box-shadow: 0 2px 8px 0 #0e1a2b22;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
     margin-top: auto;
     font-family: 'Fira Mono', monospace;
+    letter-spacing: 1px;
+    align-self: stretch;
+    text-align: center;
 }
-
 .project-button:hover {
-    background: linear-gradient(90deg, #007bff 0%, #61dafb 100%);
+    background: linear-gradient(90deg, #2c5364 0%, #3a4a5a 100%);
     color: #fff;
+    box-shadow: 0 0 16px #2c536488;
 }
 
+/* Footer */
 footer {
-    background: #1a2636;
+    background: #181f2a;
     color: #61dafb;
     text-align: center;
-    padding: 18px 0 12px 0;
+    padding: 16px 0 10px 0;
     font-size: 1rem;
     letter-spacing: 1px;
     border-top: 1px solid #232b3a;
     margin-top: 32px;
     font-family: 'Fira Mono', monospace;
+    opacity: 0.95;
 }
 
+/* Responsive adjustments */
 @media (max-width: 900px) {
     .projects-list {
-        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     }
     .about-me {
         flex-direction: column;
-        gap: 18px;
-        padding: 18px;
+        gap: 14px;
+        padding: 14px;
+    }
+}
+@media (max-width: 600px) {
+    .about-me__photo {
+        width: 90px;
+        height: 90px;
+    }
+    .about-me {
+        padding: 7px;
+    }
+    .project-card {
+        padding: 8px 4px 8px 4px;
     }
 }
 
-@media (max-width: 600px) {
-    .about-me__photo {
-        width: 110px;
-        height: 110px;
-    }
-    .about-me {
-        padding: 10px;
-    }
-    .project-card {
-        padding: 12px 6px 12px 6px;
-    }
+/* Section titles */
+h2 {
+    color: #b3cfff;
+    font-size: 2.2rem;
+    margin-bottom: 18px;
+    letter-spacing: 1px;
+    font-weight: 700;
+    text-align: center;
+    text-shadow: 0 2px 8px #00ffe733;
+}
+
+@keyframes card-fade-in {
+    0% { opacity: 0; transform: translateY(32px) scale(0.98); }
+    100% { opacity: 1; transform: translateY(0) scale(1); }
 }
