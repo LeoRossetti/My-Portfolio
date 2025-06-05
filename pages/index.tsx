@@ -1,3 +1,7 @@
+// This is the main entry point for the homepage of your Next.js app.
+// It renders the AboutMe and ProjectsList components inside a styled layout.
+// All global styles are applied via styles/globals.css, imported in _app.tsx.
+
 import React from 'react';
 import AboutMe from '../components/AboutMe';
 import ProjectsList from '../components/ProjectsList';

@@ -1,3 +1,5 @@
+// This component displays your personal information, photo, and social links.
+// It is used on the homepage to introduce yourself and provide quick access to your profiles.
 import React from 'react';
 
 const AboutMe: React.FC = () => {

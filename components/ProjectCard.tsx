@@ -1,3 +1,5 @@
+// This component displays a single project card with image, title, description, and a link.
+// It is used by ProjectsList to render each project in your portfolio.
 import React from 'react';
 
 interface ProjectCardProps {

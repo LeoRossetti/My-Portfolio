@@ -1,3 +1,6 @@
+// This component renders a list of your projects using the ProjectCard component.
+// It arranges the projects in a responsive grid and passes the relevant data to each card.
+
 import React from 'react';
 import ProjectCard from './ProjectCard';
 
