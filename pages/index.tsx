@@ -6,16 +6,24 @@ import React from 'react';
 import AboutMe from '../components/AboutMe';
 import ProjectsList from '../components/ProjectsList';
 
+// Home is the main page component for your portfolio site.
+// It brings together the AboutMe and ProjectsList sections.
 const Home: React.FC = () => {
   return (
     <div className="App">
+      {/* Header section with your site title */}
       <header className="App-header">
         <h1>My Portfolio</h1>
       </header>
+      {/* Main content area */}
       <main>
+        {/* About Me section (profile, description, social links) */}
         <AboutMe />
+        {/* Projects section (list of your projects) */}
+        <h2>Projects</h2>
         <ProjectsList />
       </main>
+      {/* Footer section */}
       <footer>
         <p>© {new Date().getFullYear()} My Portfolio</p>
       </footer>
@@ -23,4 +31,4 @@ const Home: React.FC = () => {
   );
 }
 
-export default Home;
+export default Home; // Export the main page component

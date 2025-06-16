@@ -1,58 +1,56 @@
 # My Portfolio
 
-This is a personal portfolio website that showcases my skills, projects, and professional links. The website is built using React and TypeScript, providing a modern and responsive design.
+A modern, responsive portfolio website built with **Next.js**, **React**, and **TypeScript**. This site showcases my skills, projects, and professional links with a clean, tech-inspired design.
 
 ## Features
 
-- **About Me Section**: A brief description of myself along with a photo.
-- **Project Showcase**: A list of projects with expandable links and preview images.
-- **Professional Links**: Direct links to my GitHub and LinkedIn profiles.
+- **About Me Section:** Profile photo, professional summary, and social links (GitHub, LinkedIn).
+- **Project Showcase:** Responsive grid of project cards with images, descriptions, and links.
+- **Modern UI:** Custom CSS for a sleek, professional look—no CSS frameworks required.
+- **Responsive Design:** Looks great on desktop and mobile devices.
+
+### Installation
+
+1. **Clone the repository:**
+
+   ```bash
+   git clone <repository-url>
+   cd My-Portfolio
+   ```
+
+2. **Install dependencies:**
+
+   ```bash
+   npm install
+   ```
+
+3. **Run the development server:**
+
+   ```bash
+   npm run dev
+   ```
+
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ## Project Structure
 
-```
-my-portfolio
-├── public
-│   ├── index.html          # Main HTML document
-│   └── images
-│       ├── me.jpg         # Image of myself
-│       └── project1-preview.jpg # Preview image for a project
-├── src
-│   ├── App.tsx            # Main entry point of the React application
-│   ├── components
-│   │   ├── AboutMe.tsx    # Component for the About Me section
-│   │   ├── ProjectCard.tsx # Component for individual project cards
-│   │   └── ProjectsList.tsx # Component for listing projects
-│   └── styles
-│       └── main.css       # CSS styles for the portfolio
-├── package.json            # npm configuration file
-├── tsconfig.json           # TypeScript configuration file
-└── README.md               # Project documentation
-```
+- `pages/` — Next.js pages (main entry is `index.tsx`)
+- `components/` — Reusable React components (AboutMe, ProjectsList, ProjectCard)
+- `public/images/` — Profile and project images, as well as social icons
+- `styles/globals.css` — Main global CSS for layout and design
 
-## Setup Instructions
+## Customization
 
-1. Clone the repository:
-   ```
-   git clone <repository-url>
-   ```
-2. Navigate to the project directory:
-   ```
-   cd my-portfolio
-   ```
-3. Install the dependencies:
-   ```
-   npm install
-   ```
-4. Start the development server:
-   ```
-   npm start
-   ```
+- **Profile & Socials:**
+  - Update your info and links in `components/AboutMe.tsx`.
+  - Replace `/public/images/me.jpg`, `github.png`, and `linkedin.png` with your own images/icons.
+- **Projects:**
+  - Add or edit projects in `components/ProjectsList.tsx`.
+  - Add preview images to `/public/images/` and update the `image` path in each project object.
+- **Styling:**
+  - Tweak colors, fonts, and layout in `styles/globals.css`.
 
-## Future Enhancements
+## Deployment
 
-- Add more projects to the ProjectsList component.
-- Improve styling and responsiveness.
-- Include additional sections such as testimonials or a blog.
+You can deploy this site for free using [Vercel](https://vercel.com/) (recommended for Next.js) or any platform that supports Node.js.
 
-Feel free to explore the code and customize it to fit your personal style and projects!
