@@ -4,10 +4,10 @@ import React from 'react';
 
 // Define the props (properties) that ProjectCard expects to receive
 interface ProjectCardProps {
-    title: string; // The title of the project
-    description: string; // A short description of the project
-    link: string; // A URL to the project (e.g., GitHub repo)
-    image: string; // Path to the project's preview image
+    title: string;
+    description: string;
+    link: string;
+    image: string;
 }
 
 // ProjectCard is a reusable component for displaying a single project
